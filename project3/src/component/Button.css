@@ -1,0 +1,27 @@
+.Button{
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 18px;
+    white-space: nowrap;
+    font-family: "Nanum Pen Script";
+}
+
+.Button_default{
+    background-color: #e0e0e0;
+    color: black;
+}
+
+.Button_positive{
+    background-color: #2962ff;
+    color: white;
+}
+
+.Button_negative{
+    background-color: #ff3d00;
+    color: white;
+}

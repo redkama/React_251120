@@ -1,13 +1,15 @@
-import React from 'react';
-import { useSearchParams } from 'react-router-dom';
+
+import Editor from '../component/Editor';
 
 const Home = () => {
-    const [searchParams, setSearchParams] = useSearchParams();
-    console.log(searchParams.get("sort"));
-    console.log(searchParams.get("page"));
+    
     return (
+
         <div>
-            Home 페이지 입니다.
+
+            <Editor onSubmit=
+            { (state) => alert(state.content) } />
+
         </div>
     );
 };
