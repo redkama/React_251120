@@ -8,7 +8,7 @@ export const getEmotionImgById = (emotionId) => {
 
     const targetEmotionId = String(emotionId);
 
-    switch (targetEmotionId) {
+    switch(targetEmotionId){
         case "1":
             return emotion1;
         case "2":
@@ -25,17 +25,17 @@ export const getEmotionImgById = (emotionId) => {
 };
 
 export const getFormattedDate = (targetDate) => {
-    
+
     let year = targetDate.getFullYear();
     let month = targetDate.getMonth() + 1;
     let date = targetDate.getDate();
 
     if(date < 10){
-        date = `0${date}`;
+        date = `0${date}`
     }
-
+    
     if(month < 10){
-        month = `0${month}`;
+        month = `0${month}`
     }
 
     return `${year}-${month}-${date}`;
@@ -68,3 +68,21 @@ export const emotionList = [
         img: getEmotionImgById(5),
     },
 ];
+
+export const getMonthRangeByDate = (date) => {
+    const beginTimeDate = new Date(
+                date.getFullYear(), 
+                date.getMonth(), 
+                1).getTime();
+    
+    const endTimeStamp = new Date(
+        date.getFullYear(),
+        date.getMonth() +1,
+        0,
+        23,
+        59,
+        59
+    ).getTime();
+   
+    return {beginTimeDate, endTimeStamp};
+};
