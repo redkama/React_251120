@@ -56,7 +56,7 @@ function Cart() {
                       {/* 이미지 클릭 시 해당 상품 상세 페이지로 이동 */}
                       <td>
                         <Link to={`/detail/${id}`}>
-                          <img  src={`img/${imgurl}`} style={smallProdcuctStyle} />
+                          <img src={process.env.PUBLIC_URL + `/img/${imgurl}`} style={smallProdcuctStyle} />
                         </Link>
                       
                       </td>

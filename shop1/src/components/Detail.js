@@ -1,25 +1,43 @@
 import React from 'react';
 import { useParams } from "react-router-dom";
 import { Nav } from 'react-bootstrap'
-import { useState } from 'react';
-import { useEffect } from "react";
+import { useState, useEffect } from 'react'; // 한 줄로 합침
+import { addItem } from '../store.js'
+import { useDispatch } from 'react-redux'
+import { Button } from 'react-bootstrap'
+import { Link } from 'react-router-dom';
+import styled from 'styled-components'
+
+let Banner = styled.div`
+    padding : 20px;
+    color : gray;
+`;
+
+let BannerBtn = styled.button`
+    color : white;
+    font-size:30px;
+    width:100%;
+    padding : 100px 100px;
+    border:1px solid #ccc;
+    background-image: url(${process.env.PUBLIC_URL + "/img/banner.jpg"});
+    background-size:cover;
+    background-position:center;
+`;
+
 
 
 function Detail(props) {
     let { paramId } = useParams();// paramId는 문자열로 오기 때문에 숫자로 바꿔줘야 한다.
     let [tap, setTap] = useState(0);   
 
-    // console.log(paramId);
+    // React Hook은 조건 없이 컴포넌트 최상단에서 호출되어야 함
+    let [fade2, setFade2] = useState('');
 
-    // const { imgUrl, title, content, price } = props.fruit[paramId];
+    // dispatch 정의 추가
+    const dispatch = useDispatch(); 
 
-    // props.fruit 배열에서 id가 paramId와 일치하는 상품을 찾아 item 변수에 저장
-    // paramId는 문자열이므로 parseInt를 사용해 숫자로 변환
-    let item = props.fruit.find(f => f.id === parseInt(paramId));
 
-    const { imgUrl, title, content, price } = item;
-
-    let [fade2, setFade2] = useState('')
+    
     useEffect(()=>{
         setFade2('end')
         return ()=>{
@@ -27,19 +45,59 @@ function Detail(props) {
         }
     },[])
 
+    // 상품 유효성 체크 (이건 Hook 호출 이후에 실행되어야 함)
+    
+    let selproduct = props.fruit.find((x) => x.id === Number(paramId));
+
+    // 훅은 조건문(if) 아래에서 호출하면 안 됨 (React가 Hook 순서 기억을 못함)
+    if (!selproduct) {
+        return <div>해당 상품이 존재하지 않습니다.</div>;
+    }
+
+    const { id, imgUrl, title, content, price } = selproduct;
+
+    console.log("내가 선택한 상품은: " + id + " " + title);
+
+
 
     return (
-        //<div className="container">
         <div className={'container start ' + fade2}>
+            <Banner>
+                <BannerBtn>과일농장의 맛과 건강을 선물하세요.</BannerBtn>
+            </Banner>
+
             <div className="row">
                 <div className="col-md-6">
-                <img src={'/' + imgUrl} width="100%"  alt={title} />
+                    <img src={process.env.PUBLIC_URL +"/"+ imgUrl} width="100%" alt={title} />
                 </div>
                 <div className="col-md-6">
                     <h4 className="pt-5">{title}</h4>
                     <p>{content}</p>
                     <p>{price}</p>
-                    <button className="btn btn-danger">주문하기</button>
+                    <Button
+                    variant="primary"
+                    onClick={() => {
+                      //  dispatch(addItem(  {id : 2,  imgurl : 'shoes1.jpg', name : 'Grey Yordan', count : 1}))
+
+                        dispatch(
+                            addItem({
+                                id: id,
+                                imgurl: imgUrl.replace("img/", ""),
+                                name: title,
+                                count: 1,
+                            })
+                        );
+                    }}
+                    style={{ marginRight: "10px" }}
+                    >
+                    주문하기
+                    </Button>
+
+            <Link to="/cart">
+            <Button variant="outline-success"> 주문상품 확인하기 </Button>
+            </Link>
+
+
                 </div>
             </div>
 
@@ -54,6 +112,7 @@ function Detail(props) {
                 <Nav.Link  onClick={()=>{ setTap(2) }} eventKey="link2">버튼2</Nav.Link>
                 </Nav.Item>
             </Nav>
+
 
             <TabContent tap={tap}/>
         </div>
