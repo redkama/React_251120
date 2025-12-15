@@ -1,38 +1,72 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .App {
-  text-align: center;
+  width: 100%;
+  overflow-x: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* ===== 공통 섹션 ===== */
+.section {
+  width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* ===== 메인 배너 ===== */
+.section-main {
+  height: 100vh;
+  padding-top: 134px; /* 헤더 높이만큼 */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* swiper */
+.section-main .swiper,
+.section-main .swiper-wrapper,
+.section-main .swiper-slide {
+  width: 100%;
+  height: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.main-banner {
+  width: 100%;
+  height: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.banner-slide {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.banner-slide::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+/* pagination */
+.section-main .swiper-pagination {
+  bottom: 24px;
+}
+
+.section-main .swiper-pagination-bullet {
+  background: #fff;
+  opacity: 0.6;
+}
+
+.section-main .swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+.section-main .swiper-button-prev,
+.section-main .swiper-button-next {
+  color: #fff;
 }
