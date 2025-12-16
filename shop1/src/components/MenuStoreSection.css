@@ -1,79 +1,259 @@
+/* ===============================
+   SECTION
+=============================== */
 .menu-store {
-  height: 100%;
+  width: 100%;
+  padding: 120px 0;
   display: flex;
-}
-
-/* 공통 카드 */
-.menu-store .card {
-  flex: 1;
-  position: relative;
-  color: #fff;
-  cursor: pointer;
-  overflow: hidden;
-
+  justify-content: center;
+  gap: 40px;
   background-size: cover;
   background-position: center;
 }
 
-/* 어두운 오버레이 */
-.menu-store .card::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.45);
-}
-
-/* hover 확대 효과 */
-.menu-store .card:hover {
-  transform: scale(1.01);
-  transition: transform 0.4s ease;
-}
-
-/* 내부 컨텐츠 */
-.card-inner {
+/* ===============================
+   CARD (공통)
+=============================== */
+.card {
+  width: 360px;
+  height: 480px;
+  padding: 24px;
+  box-sizing: border-box;
   position: relative;
-  z-index: 1;
-  height: 100%;
-  padding: 60px;
+  overflow: hidden;
+  color: #fff;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  gap: 16px;
 }
 
-/* 타이틀 */
-.card-inner h2 {
-  font-size: 42px;
-  margin-bottom: 16px;
+/* ===============================
+   MENU CARD
+=============================== */
+.card.menu {
+  background: rgba(120, 130, 80, 0.85);
+  gap: 16px;
 }
 
-/* 설명 */
-.card-inner p {
+/* ===============================
+   STORE CARD
+=============================== */
+.card.store {
+  background: #c0790ed9; 
+  gap: 16px;
+}
+
+/* ===============================
+   FRANCHISE CARD
+=============================== */
+.card.franchise {
+  background: hsla(9, 90%, 45%, 0.851); 
+  gap: 16px;
+}
+
+/* ===============================
+   IMAGE AREA (Swiper)
+=============================== */
+.card-media {
+  width: 100%;
+  height: 220px;           /* 이미지 영역 높이 */
+  overflow: hidden;
+}
+
+.store-swiper,
+.menu-swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.store-swiper .swiper-slide,
+.menu-swiper .swiper-slide {
+  height: 100%;
+}
+
+.store-slide,
+.menu-slide {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+/* 페이지네이션 */
+.store-swiper .swiper-pagination,
+.menu-swiper .swiper-pagination {
+  position: absolute;
+  right: 12px;
+  bottom: 8px;
+  text-align: right;
+}
+
+.store-swiper .swiper-pagination-bullet,
+.menu-swiper .swiper-pagination-bullet {
+  background: none;
+  color: rgba(255, 255, 255, 0.4);
+  margin: 0 4px;
+}
+
+.store-swiper .swiper-pagination-bullet-active,
+.menu-swiper .swiper-pagination-bullet-active {
+  color: #fff;
+  font-weight: 700;
+}
+
+.store-swiper .swiper-pagination::after,
+.menu-swiper .swiper-pagination::after {
+  content: "→";
+  margin-left: 8px;
+  color: #fff;
+}
+
+/* ===============================
+   TEXT AREA 
+=============================== */
+.franchise-title,
+.store-title,
+.menu-title {
+  font-size: 38px;
+  font-weight: 700;
+  text-align: center;
+  margin: 0;
+  line-height: 1.0;
+}
+
+.franchise-sub,
+.store-sub,
+.menu-sub {
+  text-align: center;
+  margin: 6px 0 12px;
+  line-height: 0.5;
+}
+
+/* 영문 메뉴명 */
+.menu-en {
   font-size: 16px;
-  margin-bottom: 24px;
+  font-weight: 700;
+  margin: 6px 0 2px;      /* 🔥 위/아래 간격 줄이기 */
+  line-height: 0.5;
+}
+
+/* 한글 메뉴명 */
+.store-name,
+.menu-ko {
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0 0 4px;       /* 🔥 거의 붙게 */
+  line-height: 0.5;
+}
+
+/* 메뉴 설명 */
+.menu-desc {
+  font-size: 14px;
+  opacity: 0.9;
+  margin: 0;             /* 🔥 기본 p margin 제거 */
+  line-height: 0.5;
+}
+
+/* 자세히 보기 */
+.more {
+  margin-top: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+
+
+
+/* ===============================
+   FRANCHISE CARD
+=============================== */
+
+/* 3분할 영역 */
+.franchise-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 공통 아이템 */
+.franchise-item {
+  flex: 1;                        /* 🔥 정확히 3등분 */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8px;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* 구분선 */
+.franchise-item + .franchise-item {
+  border-top: 1px dashed rgba(255,255,255,0.4);
+}
+
+/* 클릭 가능 영역 */
+.franchise-item.clickable {
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.franchise-item.clickable:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+/* 텍스트 묶음 */
+.franchise-text strong {
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.franchise-text span {
+  font-size: 14px;
   opacity: 0.9;
 }
 
-/* 링크 */
-.more {
-  font-size: 14px;
-  text-decoration: underline;
+/* 화살표 */
+.arrow {
+  font-size: 20px;
 }
 
-/* STORE 검색 */
-.store input {
-  width: 280px;
-  padding: 12px;
-  border: none;
-  outline: none;
+/* CALL 영역 */
+.franchise-item.call {
+  cursor: default;
 }
 
-/* FRANCHISE */
-.franchise-links {
-  list-style: none;
-  padding: 0;
+.call-number {
+  font-size: 24px;
+  font-weight: 700;
 }
 
-.franchise-links li {
-  margin-bottom: 12px;
-  font-size: 15px;
+/* ===============================
+   FRANCHISE ICONS
+=============================== */
+
+/* 오른쪽 아이콘 (휴대폰 / 돋보기) */
+.franchise-icon {
+  width: 54px;
+  height: auto;
+  opacity: 0.9;
+}
+
+/* 화살표 이미지 */
+.arrow-img {
+  width: 22px;
+  margin-top: 10px;
+  transition: transform 0.3s ease;
+}
+
+/* hover 시 화살표 이동 */
+.franchise-item.clickable:hover .arrow-img {
+  transform: translateX(6px);
+}
+
+/* 텍스트 영역 정렬 */
+.franchise-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
