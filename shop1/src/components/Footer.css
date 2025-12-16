@@ -1,0 +1,108 @@
+.footer {
+  background: #222;
+  color: #aaa;
+  font-size: 13px;
+}
+
+/* ================= TOP ================= */
+.footer-top {
+  background: #2a2a2a;
+  position: relative;
+}
+
+.footer-top-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-call {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #999;
+}
+
+.footer-call strong {
+  font-size: 26px;
+  color: #ff8a00;
+  font-weight: 700;
+}
+
+.footer-sns {
+  display: flex;
+  gap: 12px;
+}
+
+.footer-sns li {
+  width: 36px;
+  height: 36px;
+  background: #444;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.footer-sns img {
+  width: 16px;
+}
+
+/* TOP 버튼 */
+.btn-top {
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333;
+  color: #fff;
+  border: none;
+  width: 50px;
+  height: 36px;
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* ================= MENU ================= */
+.footer-menu {
+  background: #222;
+  border-top: 1px solid #333;
+}
+
+.footer-menu-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 40px 0 60px;
+
+  display: flex;                 /* 🔥 grid → flex */
+  justify-content: center;       /* 🔥 가운데 정렬 */
+  gap: 40px;                     /* 🔥 컬럼 간 간격 (조절 포인트) */
+}
+
+/* 각 컬럼 */
+.footer-col {
+  min-width: 120px;              /* 🔥 컬럼 폭 고정감 */
+}
+
+/* 타이틀 */
+.footer-col h4 {
+  color: #ff8a00;
+  font-size: 14px;
+  margin-bottom: 14px;
+}
+
+/* 리스트 */
+.footer-col li {
+  line-height: 1.8;
+  cursor: pointer;
+  white-space: nowrap;           /* 🔥 줄바꿈 방지 */
+}
+
+.footer-col li:hover {
+  color: #fff;
+}

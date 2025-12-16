@@ -1,0 +1,102 @@
+.news-section {
+  width: 100%;
+  padding: 120px 0;
+  background: #fff;
+}
+
+/* 타이틀 */
+.news-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.news-header h2 {
+  font-size: 60px;
+  font-weight: 800;
+  margin: 0;
+}
+
+.news-header p {
+  font-size: 14px;
+  color: #444;
+}
+
+/* 탭 */
+.news-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.news-tabs button {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  padding-bottom: 6px;
+  color: #999;
+}
+
+.news-tabs button.active {
+  color: #e60012;
+  border-bottom: 2px solid #e60012;
+  font-weight: 700;
+}
+
+/* 리스트 */
+.news-list {
+  max-width: 1000px;
+  margin: 0 auto;
+  border-top: 1px solid #eee;
+}
+
+.news-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 24px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 16px;
+}
+
+.news-item .badge {
+  background: #e60012;
+  color: #fff;
+  font-size: 13px;
+  padding: 4px 14px;
+  border-radius: 20px;
+  min-width: 52px;
+  text-align: center;
+}
+
+.news-item .date {
+  color: #999;
+  min-width: 100px;
+}
+
+.news-item .title {
+  flex: 1;
+}
+
+/* 더보기 버튼 */
+.news-more-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.news-more {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 14px 36px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.news-more:hover {
+  background: #e60012;
+  border-color: #e60012;
+  color: #fff;
+}

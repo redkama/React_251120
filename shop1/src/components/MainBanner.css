@@ -1,0 +1,52 @@
+/* ===== 메인 배너 ===== */
+.section-main {
+  height: 100vh;
+  padding-top: 134px; /* 헤더 높이 */
+}
+
+/* swiper */
+.section-main .swiper,
+.section-main .swiper-wrapper,
+.section-main .swiper-slide {
+  width: 100%;
+  height: 100%;
+}
+
+.main-banner {
+  width: 100%;
+  height: 100%;
+}
+
+.banner-slide {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.banner-slide::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+/* pagination */
+.section-main .swiper-pagination {
+  bottom: 24px;
+}
+
+.section-main .swiper-pagination-bullet {
+  background: #fff;
+  opacity: 0.6;
+}
+
+.section-main .swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+.section-main .swiper-button-prev,
+.section-main .swiper-button-next {
+  color: #fff;
+}
