@@ -26,6 +26,12 @@
   color: #999;
 }
 
+.footer-call img {
+  width: 32px;              
+  height: 32px;
+  display: block;
+}
+
 .footer-call strong {
   font-size: 26px;
   color: #ff8a00;
@@ -34,22 +40,42 @@
 
 .footer-sns {
   display: flex;
-  gap: 12px;
+  gap: 14px;
 }
 
+/* 동그라미 영역 */
 .footer-sns li {
-  width: 36px;
-  height: 36px;
+  width: 48px;              /* 🔥 영역 키움 */
+  height: 48px;
   background: #444;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+
+  transition: background 0.2s ease;
 }
 
+/* 아이콘 크기 */
 .footer-sns img {
-  width: 16px;
+  width: 32px;              /* 🔥 핵심 */
+  height: 32px;
+  display: block;
+
+  image-rendering: crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+/* hover 효과 */
+.footer-sns li:hover {
+  background: #555;
+}
+
+.footer-sns li:hover img {
+  filter: saturate(1.1);
 }
 
 /* TOP 버튼 */

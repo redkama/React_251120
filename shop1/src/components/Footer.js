@@ -20,16 +20,16 @@ function Footer() {
       <div className="footer-top">
         <div className="footer-top-inner">
           <div className="footer-call">
-            <span className="icon">☎</span>
+            <span className="icon"><img src={process.env.PUBLIC_URL + "/img/icon_call.png"} alt="call" /></span>
             <span className="label">대표번호</span>
             <strong>1661-3392</strong>
           </div>
 
           <ul className="footer-sns">
-            <li><img src={process.env.PUBLIC_URL + "/img/icon-facebook.png"} alt="fb" /></li>
-            <li><img src={process.env.PUBLIC_URL + "/img/icon-blog.png"} alt="blog" /></li>
-            <li><img src={process.env.PUBLIC_URL + "/img/icon-instagram.png"} alt="insta" /></li>
-            <li><img src={process.env.PUBLIC_URL + "/img/icon-youtube.png"} alt="yt" /></li>
+            <li><img src={process.env.PUBLIC_URL + "/img/icon_facebook_ft.png"} alt="fb" /></li>
+            <li><img src={process.env.PUBLIC_URL + "/img/icon_blog_ft.png"} alt="blog" /></li>
+            <li><img src={process.env.PUBLIC_URL + "/img/icon_instagram_ft.png"} alt="insta" /></li>
+            <li><img src={process.env.PUBLIC_URL + "/img/icon_youtube_ft.png"} alt="yt" /></li>
           </ul>
         </div>
 

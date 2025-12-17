@@ -157,6 +157,12 @@ ul, li {
   transition: color 0.2s ease;
 }
 
+.gnb li a {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+}
+
 /* hover */
 .gnb li:hover {
   color: #111;
@@ -234,5 +240,15 @@ ul, li {
 }
 
 .mega-col.active li:hover {
+  color: #ffcc00;
+}
+
+.mega-col li a {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+}
+
+.mega-col.active li a:hover {
   color: #ffcc00;
 }

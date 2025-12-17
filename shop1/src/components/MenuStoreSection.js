@@ -12,7 +12,8 @@ import storeData from "../db/store";
 
 function MenuStoreSection() {
 
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [menuIndex, setMenuIndex] = useState(0);
+  const [storeIndex, setStoreIndex] = useState(0);
 
   return (
     <section
@@ -31,7 +32,7 @@ function MenuStoreSection() {
             modules={[Pagination, Autoplay]}
             autoplay={{ delay: 3000 }}
             loop={true}
-            onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
+            onSlideChange={(swiper) => setMenuIndex(swiper.realIndex)}
             pagination={{
               clickable: true,
               renderBullet: (index, className) =>
@@ -50,9 +51,9 @@ function MenuStoreSection() {
           </Swiper>
         </div>
 
-        <strong className="menu-en">{menuData[activeIndex].en}</strong>
-        <span className="menu-ko">{menuData[activeIndex].ko}</span>
-        <span className="menu-desc">{menuData[activeIndex].desc}</span>
+        <strong className="menu-en">{menuData[menuIndex].en}</strong>
+        <span className="menu-ko">{menuData[menuIndex].ko}</span>
+        <span className="menu-desc">{menuData[menuIndex].desc}</span>
         <span className="more">자세히 보기 →</span>
       </div>
 
@@ -66,7 +67,7 @@ function MenuStoreSection() {
             modules={[Pagination, Autoplay]}
             autoplay={{ delay: 3000 }}
             loop={true}
-            onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
+            onSlideChange={(swiper) => setStoreIndex(swiper.realIndex)}
             pagination={{
               clickable: true,
               renderBullet: (index, className) =>
@@ -85,8 +86,8 @@ function MenuStoreSection() {
           </Swiper>
         </div>
 
-        <strong className="store-name">{storeData[activeIndex].name}</strong>
-        <span className="store-call">{storeData[activeIndex].call}</span>
+        <strong className="store-name">{storeData[storeIndex].name}</strong>
+        <span className="store-call">{storeData[storeIndex].call}</span>
         <span className="more">자세히 보기 →</span>
       </div>
 
