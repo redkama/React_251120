@@ -1,0 +1,122 @@
+/* ===== 필터 영역 ===== */
+.menu-filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+/* 카테고리 버튼 */
+.menu-category {
+  display: flex;
+  gap: 10px;
+}
+
+.menu-category button {
+  padding: 8px 18px;
+  border: 1px solid #ddd;
+  background: #fff;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.menu-category button.active {
+  background: #333;
+  color: #fff;
+  border-color: #333;
+}
+
+/* 정렬 */
+.menu-sort select {
+  padding: 8px 12px;
+  font-size: 14px;
+}
+
+/* ===== 메뉴 그리드 ===== */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+/* ===== 메뉴 카드 ===== */
+.menu-item {
+  text-align: center;
+  border: 1px solid #e5e5e5;        /* 🔹 연회색 얇은 테두리 */
+  padding: 20px;
+  transition: border-color 0.25s ease;
+  background: #fff;
+}
+
+/* hover 시 */
+.menu-item:hover {
+  border-color: #e60012;            /* 🔴 맛닭꼬 레드 */
+  transform: scale(1.03)
+}
+
+/* 이미지 영역 */
+.menu-thumb {
+  width: 100%;
+  height: 220px;
+  background-size: contain;         /* 🔥 이미지 잘림 방지 */
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 14px;
+}
+
+/* 한글명 */
+.menu-name {
+  display: block;
+  font-size: 15px;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 4px;
+}
+
+/* 영문명 */
+.menu-en {
+  display: block;
+  font-size: 13px;
+  color: #888;
+}
+
+.menu-price {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* 썸네일 wrapper */
+.menu-thumb-wrap {
+  position: relative;
+}
+
+/* 공통 뱃지 */
+.menu-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 2;
+
+  padding: 4px 8px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  border-radius: 2px;
+  letter-spacing: 0.02em;
+}
+
+/* NEW */
+.menu-badge.new {
+  background: #e60012;   /* 🔴 맛닭꼬 레드 */
+}
+
+/* HOT */
+.menu-badge.hot {
+  background: #ff9800;   /* 🔥 오렌지 */
+}
+
+.menu-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}

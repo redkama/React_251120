@@ -38,17 +38,69 @@ ul, li {
   height: 52px;
 }
 
+.top-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;   /* 장바구니 ↔ SNS 간격 */
+}
+
+.top-cart {
+  width: 56px;          /* 🔥 SNS li와 통일 */
+  height: 50px;         /* 🔥 SNS li와 통일 */
+  border-right: 1px solid rgba(255,255,255,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent; 
+  position: relative; 
+}
+
+.top-cart img {
+  width: 40px;          /* 🔥 22 → 26 */
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.top-cart:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+.top-cart img:hover {
+  transform: scale(1.15);
+}
+
+/* ===============================
+   CART BADGE
+=============================== */
+
+.cart-badge {
+  position: absolute;
+  top: -2px;
+  right: 33px;
+
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+
+  background: #e60012;
+  color: #fff;
+
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 18px;
+  text-align: center;
+
+  border-radius: 999px;   /* 🔥 완전 동그라미 */
+}
+
+
 /* ===== SNS 박스 ===== */
 .top-sns {
   display: flex;
   background: #fff;
   border-radius: 2px;
   overflow: hidden;
-
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
 }
 
 /* ===== SNS 하나 ===== */

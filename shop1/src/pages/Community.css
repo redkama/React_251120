@@ -1,0 +1,90 @@
+/* ===============================
+   BOARD
+=============================== */
+.board-wrap {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* 검색 */
+.board-search {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  padding: 16px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+  background-color: #fcfcfc;
+}
+
+.board-search select,
+.board-search input {
+  height: 24px;
+  border: 1px solid #ccc;
+  padding: 0 1px;
+  font-size: 13px;
+}
+
+.board-search button {
+  width: 60px;
+  background: #333;
+  color: #fff;
+  border: none;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+/* 총 건수 */
+.board-total {
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+/* 테이블 */
+.board-table {
+  width: 100%;
+  border-top: 2px solid #ee0f0f;
+  border-collapse: collapse;
+}
+
+.board-table th {
+  padding: 12px 0;
+  border-bottom: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.board-table td {
+  padding: 10px 0;
+  border-bottom: 1px solid #e5e5e5;
+  font-size: 13px;
+  text-align: center;
+}
+
+.board-table td.title {
+  text-align: left;
+  padding-left: 10px;
+}
+
+.board-table tr:hover {
+  background: #fafafa;
+}
+
+.lock {
+  margin-left: 6px;
+  font-size: 12px;
+}
+
+/* 글쓰기 버튼 */
+.board-write {
+  text-align: right;
+  margin-top: 12px;
+}
+
+.board-write button {
+  padding: 6px 16px;
+  background: #333;
+  color: #fff;
+  border: none;
+  font-size: 13px;
+  cursor: pointer;
+}

@@ -1,0 +1,115 @@
+/* ===============================
+   MENU DETAIL
+=============================== */
+.menu-detail-wrap {
+  display: flex;
+  gap: 60px;
+  margin-bottom: 80px;
+}
+
+/* 이미지 */
+.menu-detail-img {
+  flex: 1;
+  border: 1px solid #e5e5e5;
+  padding: 20px;
+}
+
+.menu-detail-img img {
+  width: 100%;
+  display: block;
+}
+
+/* 정보 */
+.menu-detail-info {
+  flex: 1;
+}
+
+.menu-detail-ko {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.menu-detail-en {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.menu-detail-desc {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.menu-detail-price {
+  font-size: 24px;
+  font-weight: 700;
+  color: #e60012;
+  margin-bottom: 30px;
+}
+
+/* 버튼 */
+.menu-detail-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.btn-cart {
+  padding: 14px 28px;
+  background: #e60012;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-cart:hover {
+  background: #c90010;
+}
+
+.btn-outline {
+  padding: 14px 28px;
+  border: 1px solid #333;
+  color: #333;
+  text-decoration: none;
+}
+
+/* ===============================
+   TAB
+=============================== */
+.menu-detail-tab {
+  border-top: 1px solid #e5e5e5;
+}
+
+.tab-menu {
+  display: flex;
+  gap: 40px;
+  margin: 40px 0 20px;
+}
+
+.tab-menu li {
+  cursor: pointer;
+  font-size: 15px;
+  padding-bottom: 8px;
+}
+
+.tab-menu li.active {
+  font-weight: 700;
+  border-bottom: 2px solid #e60012;
+}
+
+/* 탭 내용 */
+.tab-content {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* 탭 전환 애니메이션 */
+.start {
+  opacity: 0;
+}
+
+.start.end {
+  opacity: 1;
+  transition: opacity 0.3s;
+}

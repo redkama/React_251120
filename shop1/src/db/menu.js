@@ -5,8 +5,9 @@ const menuData = [
     en: "ORIGINAL BROWN RICE BAKE",
     ko: "오리지날 현미베이크",
     desc: "바삭하고 고소함이 일품인 맛닭꼬의 대표 메뉴",
-    price: 10000,
-    category: "Bake"
+    price: 9000,
+    category: "Bake",
+    badge: "NEW"
   },
   {
     id: 2,
@@ -14,8 +15,9 @@ const menuData = [
     en: "GARLIC BROWN RICE BAKE",
     ko: "갈릭 현미베이크",
     desc: "달콤한 갈릭소스와 현미 베이크의 고소함이 어우러진 메뉴",
-    price: 10000,
-    category: "Bake"
+    price: 11000,
+    category: "Bake",
+    badge: "NEW"
   },
   {
     id: 3,
@@ -24,7 +26,8 @@ const menuData = [
     ko: "강정 현미베이크",
     desc: "강정소스의 깊은 맛이 치킨 속살까지 느껴지는 메뉴",
     price: 10000,
-    category: "Bake"
+    category: "Bake",
+    badge: ""
   },
   {
     id: 4,
@@ -33,7 +36,8 @@ const menuData = [
     ko: "핫소스 현미베이크",
     desc: "화끈한 매운맛 하지만 당기는 매운맛",
     price: 10000,
-    category: "Bake"
+    category: "Bake",
+    badge: ""
   },
   {
     id: 5,
@@ -42,7 +46,8 @@ const menuData = [
     ko: "칠리 현미베이크",
     desc: "새콤 달콤한 칠리소스의 풍미가 입안 가득 확 감겨드는 메뉴",
     price: 10000,
-    category: "Bake"
+    category: "Bake",
+    badge: ""
   },
   {
     id: 6,
@@ -51,7 +56,8 @@ const menuData = [
     ko: "트리플 현미베이크",
     desc: "3가지 소스와 치킨의 환상 조합이 입안에서 팡팡 터지는 색다른 맛",
     price: 10000,
-    category: "Bake"
+    category: "Bake",
+    badge: ""
   },
   {
     id: 7,
@@ -60,16 +66,18 @@ const menuData = [
     ko: "마늘아 현미베이크",
     desc: "맛과 건강을 동시에 잡은 스위트한 마늘 치킨 메뉴",
     price: 10000,
-    category: "Bake"
+    category: "Bake",
+    badge: ""
   },
   {
     id: 8,
     img: process.env.PUBLIC_URL + "/img/img_menu_bake008.jpg",
-    en: "HOT PEPPERS GANGJEONG BROWN RICE BAKE",
+    en: "GANGJEONG BROWN RICE BAKE",
     ko: "고추강정 현미베이크",
     desc: "고추의 매콤한 풍미와 조청의 깊은맛이 어우러진 새로운 메뉴",
     price: 10000,
-    category: "Bake"
+    category: "Bake",
+    badge: ""
   },
   {
     id: 9,
@@ -78,16 +86,18 @@ const menuData = [
     ko: "사천 현미베이크",
     desc: "중국 사천지방의 매운맛이 침샘을 자극하여 입안을 황홀하게 하는 메뉴",
     price: 10000,
-    category: "Bake"
+    category: "Bake",
+    badge: ""
   },
   {
     id: 10,
     img: process.env.PUBLIC_URL + "/img/img_menu_bake010.jpg",
-    en: "GREEN ONION &amp; BROWN RICE BAKE",
+    en: "GREEN ONION BROWN RICE BAKE",
     ko: "파파닭 현미베이크",
     desc: "파의 후레쉬한 풍미가 현미베이크의 맛을 한층 더 살려 주는 메뉴",
     price: 10000,
-    category: "Bake"
+    category: "Bake",
+    badge: ""
   },
   {
     id: 11,
@@ -96,7 +106,8 @@ const menuData = [
     ko: "마라 현미베이크",
     desc: "진한 마라의 풍미가 드디어 현미베이크를 만났다! 책임질 수 없는 치명적인 마성의 맛",
     price: 10000,
-    category: "Bake"
+    category: "Bake",
+    badge: ""
   },
   {
     id: 12,
@@ -105,7 +116,8 @@ const menuData = [
     ko: "치즈 뿌리꼬 현미베이크",
     desc: "바삭한 현미베이크에 치즈의 풍미가 사르르~ 세상에 이런맛이~",
     price: 10000,
-    category: "Bake"
+    category: "Bake",
+    badge: ""
   },
   {
     id: 13,
@@ -114,7 +126,8 @@ const menuData = [
     ko: "카레 뿌리꼬 현미베이크",
     desc: "고소한 현미베이크에 카레의 풍미가 물씬~ 너무 매력있어!",
     price: 10000,
-    category: "Bake"
+    category: "Bake",
+    badge: ""
   },
   {
     id: 14,
@@ -123,7 +136,8 @@ const menuData = [
     ko: "참치 순살 현미베이크",
     desc: "바삭한 현미베이크와 고단백질 참치의 고소함 양파의 아삭하고 상큼한 향이 살아있는 이색적인 메뉴 ",
     price: 10000,
-    category: "Bake"
+    category: "Bake",
+    badge: ""
   },
   {
     id: 15,
@@ -132,7 +146,8 @@ const menuData = [
     ko: "유린기 순살 현미베이크",
     desc: "상큼하고 깔끔한 유린기 소스와 치킨이 어우러져 느끼함이 전혀없는 현미베이크 순살 전용 메뉴",
     price: 10000,
-    category: "Bake"
+    category: "Bake",
+    badge: ""
   },
   {
     id: 16,
@@ -141,7 +156,8 @@ const menuData = [
     ko: "와닭 순살 현미베이크",
     desc: "신선한 야채, 생와사비, 치킨의 삼박자가 어우러진 후레쉬한 환상의 하모니",
     price: 10000,
-    category: "Bake"
+    category: "Bake",
+    badge: ""
   },
   {
     id: 17,
@@ -150,7 +166,8 @@ const menuData = [
     ko: "오리지날 로스트",
     desc: "은은한 훈제향과 단백한 육질이 촉촉하고 부드러운 메뉴",
     price: 10000,
-    category: "Roast"
+    category: "Roast",
+    badge: ""
   },
   {
     id: 18,
@@ -159,7 +176,8 @@ const menuData = [
     ko: "바베큐 로스트",
     desc: "바비큐의 깊고 매운맛을 단계별로 느껴볼 수 있는 메뉴 ( 매운맛 1~4단계 중 택일)",
     price: 10000,
-    category: "Roast"
+    category: "Roast",
+    badge: ""
   },
   {
     id: 19,
@@ -168,7 +186,8 @@ const menuData = [
     ko: "데리갈릭 로스트",
     desc: "짭쪼름한 간장소스가 입맛을 확 당기게 하는 메뉴",
     price: 10000,
-    category: "Roast"
+    category: "Roast",
+    badge: ""
   },
   {
     id: 20,
@@ -177,7 +196,8 @@ const menuData = [
     ko: "치즈칠리 로스트",
     desc: "새콤 달콤한 맛과 담백한 치즈가 어울리는 메뉴 ( 순한맛, 매운맛 중 택일)",
     price: 10000,
-    category: "Roast"
+    category: "Roast",
+    badge: "NEW"
   },
   {
     id: 21,
@@ -186,7 +206,8 @@ const menuData = [
     ko: "깐풍기 로스트",
     desc: "매콤한 중화풍의 소스가 입안의 침샘을 맛있게 자극하는 메뉴",
     price: 10000,
-    category: "Roast"
+    category: "Roast",
+    badge: "HOT"
   },
   {
     id: 22,
@@ -195,7 +216,8 @@ const menuData = [
     ko: "두반장 로스트",
     desc: "중국식의 두반장소스와 태국고추가 찰떡궁합인 치킨메뉴",
     price: 10000,
-    category: "Roast"
+    category: "Roast",
+    badge: "HOT"
   },
   {
     id: 23,
@@ -204,7 +226,8 @@ const menuData = [
     ko: "갈비 로스트",
     desc: "숯불 갈비맛 그대로 새로운 녀석이 왔다",
     price: 10000,
-    category: "Roast"
+    category: "Roast",
+    badge: ""
   },
   {
     id: 24,
@@ -213,7 +236,8 @@ const menuData = [
     ko: "숯불 로스트",
     desc: "숯불의 향과 땡초의 화끈한 매운맛이 입맛을 자극하는 중독성 있는 새로운 메뉴",
     price: 10000,
-    category: "Roast"
+    category: "Roast",
+    badge: ""
   },
   {
     id: 25,
@@ -222,16 +246,18 @@ const menuData = [
     ko: "로스트 순살 파닭",
     desc: "오븐에 구워 육즙이 살아 있는 구이와 파의 신선한 풍미가 어우러져 개운한 치킨 메뉴",
     price: 10000,
-    category: "Roast"
+    category: "Roast",
+    badge: ""
   },
   {
     id: 26,
     img: process.env.PUBLIC_URL + "/img/img_menu_roast010.jpg",
     en: "FRESH CHEESE FONDUE CHICKEN",
     ko: "치즈 순살 퐁닭",
-    desc: "치즈의 고소함, 요거트의 상큼함, 두반장의 매콤함까지 3박자가 어우러져 미각을 즐겁게 하는 야심적인 맛닭꼬 신메뉴",
+    desc: "치즈의 고소함, 요거트의 상큼함, 두반장의 매콤함까지 3박자가 어우러진 야심적인 맛닭꼬 신메뉴",
     price: 10000,
-    category: "Roast"
+    category: "Roast",
+    badge: ""
   },
   {
     id: 27,
@@ -240,7 +266,8 @@ const menuData = [
     ko: "와닭 순살 로스트",
     desc: "신선한 야채, 생와사비, 치킨의 삼박자가 어우러진 후레쉬한 환상의 하모니",
     price: 10000,
-    category: "Roast"
+    category: "Roast",
+    badge: ""
   },
   {
     id: 28,
@@ -249,7 +276,8 @@ const menuData = [
     ko: "스테이크 순살 로스트",
     desc: "아메리칸 스타일! 달짝하게 호불호 없는 중독적인 맛!",
     price: 10000,
-    category: "Roast"
+    category: "Roast",
+    badge: ""
   },
   {
     id: 29,
@@ -258,7 +286,8 @@ const menuData = [
     ko: "스리라차 순살 로스트",
     desc: "태국에서 느낄 수 있던 맛! 매콤하고 중독적인 감칠맛닭!",
     price: 10000,
-    category: "Roast"
+    category: "Roast",
+    badge: ""
   }
 ];
 

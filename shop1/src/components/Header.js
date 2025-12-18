@@ -3,6 +3,8 @@ import "./Header.css";
 
 import { Link, useLocation } from "react-router-dom";
 
+import { useSelector } from "react-redux";
+
 const menuData = [
   { title: "COMPANY", path: "/company", sub: ["CEO 인사말", "BI", "연혁", "오시는길"] },
   { title: "BRAND STORY", path: "/brand", sub: ["브랜드소개", "신선푸드", "신선의 하루", "물류의 하루", "현미베이크이야기"] },
@@ -31,6 +33,11 @@ function Header() {
     setActiveMenu(null);
   };
 
+  const { cart } = useSelector((state) => state);
+
+  // 총 상품 수량 (count 합산)
+  const cartCount = cart.reduce((sum, item) => sum + item.count, 0);
+
   return (
     <header className="header">
       <div className="top-logo">
@@ -40,32 +47,47 @@ function Header() {
               <img src={process.env.PUBLIC_URL + "/img/img_logo_main.jpg"} alt="맛닭꼬" />
             </Link>
           </h1>
-          
-          <ul className="top-sns">
-            <li>
-              <a href="https://www.facebook.com/" target="_blank" rel="noreferrer">
-                <img src={process.env.PUBLIC_URL + "/img/icon-facebook.png"} alt="fb" />
-              </a>
-            </li>
+          <div className="top-right">
+            <div className="top-cart">
+              <Link to="/cart">
+                <img
+                  src={process.env.PUBLIC_URL + "/img/img_cart.jpg"}
+                  alt="cart"
+                />
 
-            <li>
-              <a href="https://blog.naver.com/" target="_blank" rel="noreferrer">
-                <img src={process.env.PUBLIC_URL + "/img/icon-blog.png"} alt="blog" />
-              </a>
-            </li>
+                {cartCount > 0 && (
+                  <span className="cart-badge">{cartCount}</span>
+                )}
+              </Link>
+            </div>
 
-            <li>
-              <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">
-                <img src={process.env.PUBLIC_URL + "/img/icon-instagram.png"} alt="insta" />
-              </a>
-            </li>
+            <ul className="top-sns">
+              
+              <li>
+                <a href="https://www.facebook.com/" target="_blank" rel="noreferrer">
+                  <img src={process.env.PUBLIC_URL + "/img/icon-facebook.png"} alt="fb" />
+                </a>
+              </li>
 
-            <li>
-              <a href="https://www.youtube.com/" target="_blank" rel="noreferrer">
-                <img src={process.env.PUBLIC_URL + "/img/icon-youtube.png"} alt="yt" />
-              </a>
-            </li>
-          </ul>
+              <li>
+                <a href="https://blog.naver.com/" target="_blank" rel="noreferrer">
+                  <img src={process.env.PUBLIC_URL + "/img/icon-blog.png"} alt="blog" />
+                </a>
+              </li>
+
+              <li>
+                <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">
+                  <img src={process.env.PUBLIC_URL + "/img/icon-instagram.png"} alt="insta" />
+                </a>
+              </li>
+
+              <li>
+                <a href="https://www.youtube.com/" target="_blank" rel="noreferrer">
+                  <img src={process.env.PUBLIC_URL + "/img/icon-youtube.png"} alt="yt" />
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
 

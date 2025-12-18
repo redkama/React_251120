@@ -24,9 +24,8 @@ export let { changeName, increase } = user.actions
 let cart = createSlice({
     name : 'cart',
     initialState : [
-      {id : 1, imgurl:'fruit1.jpg', name : '수박', count : 2},
-      {id : 2, imgurl:'fruit2.jpg', name : '참외', count : 1},
-      {id : 3, imgurl:'fruit3.jpg', name : '사과', count : 1}
+      {id : 1, img:process.env.PUBLIC_URL + "/img/img_menu_bake007.jpg", name : '마늘아 현미베이크', price : 12000, count : 2},
+      {id : 2, img:process.env.PUBLIC_URL + "/img/img_menu_roast008.jpg", name : '숯불 로스트', price : 8000, count : 3}
     ],
     reducers : {
      // 상품 수량 1개 늘리기
@@ -34,10 +33,6 @@ let cart = createSlice({
         let num = state.findIndex((a) => {
           return a.id === action.payload;
       });
-      console.log(num);
-      console.log("내가 선택한 상품"+ action.payload);
-      console.log("내가 추가한 상품아이디는"+ state[num].id);
-      console.log("내가 추가한 상품갯수는"+ state[num].count);
 
       state[num].count++;
     },
@@ -46,7 +41,6 @@ let cart = createSlice({
       let num = state.findIndex((a) => {
         return a.id === action.payload;
       });
-      console.log(num);
       if (state[num].count > 0) {
         state[num].count--;
       } else if (state[num].count === 0) {

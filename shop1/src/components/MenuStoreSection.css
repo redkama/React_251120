@@ -56,14 +56,14 @@
 =============================== */
 .card-media {
   width: 100%;
-  height: 220px;           /* 이미지 영역 높이 */
-  overflow: hidden;
+  height: auto;          
+  overflow: visible;
 }
 
 .store-swiper,
 .menu-swiper {
   width: 100%;
-  height: 100%;
+  height: auto;   
 }
 
 .store-swiper .swiper-slide,
@@ -74,38 +74,95 @@
 .store-slide,
 .menu-slide {
   width: 100%;
-  height: 100%;
+  height: 200px;
   background-size: cover;
   background-position: center;
 }
 
-/* 페이지네이션 */
+/* ===============================
+   PAGINATION (MENU / STORE 공통)
+=============================== */
 .store-swiper .swiper-pagination,
 .menu-swiper .swiper-pagination {
-  position: absolute;
-  right: 12px;
-  bottom: 8px;
+  position: relative;          /* 기존 유지 */
+  margin-top: 10px;
   text-align: right;
+
+  display: flex;               /* 🔥 가로 정렬 */
+  justify-content: flex-end;
+  align-items: center;
+
+  white-space: nowrap;         /* 🔥 줄바꿈 방지 */
+  overflow: hidden;
 }
 
+/* 내부 정렬 */
+.pg-inner {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* 화살표 */
+.pg-arrow {
+  background: none;
+  border: 1px solid rgba(255,255,255,0.6);
+  color: #fff;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.pg-arrow:hover {
+  background: rgba(255,255,255,0.15);
+}
+
+/* 숫자 영역 */
+.pg-numbers {
+  display: flex;
+  gap: 6px;
+}
+
+/* 숫자 */
+.pg-num {
+  font-size: 14px;
+  color: rgba(255,255,255,0.4);
+  cursor: pointer;
+}
+
+.pg-num.active {
+  color: #fff;
+  font-weight: 700;
+  transform: scale(1.2);
+}
+
+/* 숫자 bullet */
 .store-swiper .swiper-pagination-bullet,
 .menu-swiper .swiper-pagination-bullet {
+  display: inline-flex;        /* 🔥 10,11 대응 */
+  align-items: center;
+  justify-content: center;
+
+  min-width: 18px;             /* 🔥 두 자리 숫자 대비 */
+  height: 18px;
+
   background: none;
   color: rgba(255, 255, 255, 0.4);
   margin: 0 4px;
+
+  font-size: 13px;
+  line-height: 1;
 }
 
+/* 활성 bullet */
 .store-swiper .swiper-pagination-bullet-active,
 .menu-swiper .swiper-pagination-bullet-active {
   color: #fff;
   font-weight: 700;
-}
-
-.store-swiper .swiper-pagination::after,
-.menu-swiper .swiper-pagination::after {
-  content: "→";
-  margin-left: 8px;
-  color: #fff;
+  transform: scale(1.2);
+  transition: transform 0.2s ease;
 }
 
 /* ===============================
@@ -125,15 +182,16 @@
 .store-sub,
 .menu-sub {
   text-align: center;
-  margin: 6px 0 12px;
+  margin: 6px 0 0px;
   line-height: 0.5;
 }
 
 /* 영문 메뉴명 */
+.store-call,
 .menu-en {
   font-size: 16px;
   font-weight: 700;
-  margin: 6px 0 2px;      /* 🔥 위/아래 간격 줄이기 */
+  margin: 6px 0 2px;      
   line-height: 0.5;
 }
 
@@ -142,7 +200,7 @@
 .menu-ko {
   font-size: 22px;
   font-weight: 600;
-  margin: 0 0 4px;       /* 🔥 거의 붙게 */
+  margin: 0 0 4px;       
   line-height: 0.5;
 }
 
@@ -150,13 +208,12 @@
 .menu-desc {
   font-size: 14px;
   opacity: 0.9;
-  margin: 0;             /* 🔥 기본 p margin 제거 */
-  line-height: 0.5;
+  line-height: 1.1;
 }
 
 /* 자세히 보기 */
 .more {
-  margin-top: 10px;
+  margin-top: 8px;
   font-weight: 600;
   cursor: pointer;
 }

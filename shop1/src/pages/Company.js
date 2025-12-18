@@ -9,7 +9,7 @@ function CompanyPage() {
         { label: "CEO 인사말", path: "/company" },
         { label: "BI", path: "/company/" },
         { label: "연혁", path: "/company/" },
-        { label: "오시는길", path: "/company/map" },
+        { label: "오시는길", path: "/company/" },
       ]}
     >
       {/* 실제 콘텐츠 */}

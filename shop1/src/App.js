@@ -13,9 +13,12 @@ import { Routes, Route } from "react-router-dom";
 import Company from "./pages/Company";
 import Brand from "./pages/Brand";
 import Menu from "./pages/Menu";
+import MenuDetail from "./pages/MenuDetail";
 import Store from "./pages/Store";
 import Franchise from "./pages/Franchise";
 import Community from "./pages/Community";
+
+import Cart from "./components/Cart";
 
 function App() {
   return (
@@ -49,9 +52,12 @@ function App() {
         <Route path="/company" element={<Company />} />
         <Route path="/brand" element={<Brand />} />
         <Route path="/menu" element={<Menu />} />
+        <Route path="/menu/:menuId" element={<MenuDetail />} />
         <Route path="/store" element={<Store />} />
         <Route path="/franchise" element={<Franchise />} />
         <Route path="/community" element={<Community />} />
+
+        <Route path="/cart" element={<Cart />} />
 
       </Routes>
 
