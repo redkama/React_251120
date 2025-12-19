@@ -11,6 +11,8 @@ import { useState } from "react";
 import menuData from "../db/menu";
 import storeData from "../db/store";
 
+import { Link } from "react-router-dom";
+
 function MenuStoreSection() {
   const [menuIndex, setMenuIndex] = useState(0);
   const [storeIndex, setStoreIndex] = useState(0);
@@ -109,9 +111,11 @@ function MenuStoreSection() {
           </div>
         </div>
 
-        <strong className="menu-en">{menuData[menuIndex].en}</strong>
+        <span className="menu-en">{menuData[menuIndex].en}</span>
         <span className="menu-ko">{menuData[menuIndex].ko}</span>
-        <span className="more">자세히 보기 →</span>
+        <Link to="/menu" className="more">
+          자세히 보기 →
+        </Link> 
       </div>
 
       {/* ================= STORE ================= */}
@@ -200,7 +204,9 @@ function MenuStoreSection() {
 
         <strong className="store-name">{storeData[storeIndex].name}</strong>
         <span className="store-call">{storeData[storeIndex].call}</span>
-        <span className="more">자세히 보기 →</span>
+        <Link to="/store" className="more">
+          자세히 보기 →
+        </Link> 
       </div>
 
       {/* ================= FRANCHISE ================= */}
@@ -211,10 +217,10 @@ function MenuStoreSection() {
         </span>
 
         <div className="franchise-body">
-          <a href="#" className="franchise-item clickable">
+          <Link to="/community" className="franchise-item clickable">
             <div className="franchise-text">
               <strong>SMS</strong>
-              <span>간편문의</span>
+              <span className="more">간편문의</span>
               <img
                 src={process.env.PUBLIC_URL + "/img/icon_arrow_right.png"}
                 alt="arrow"
@@ -226,12 +232,12 @@ function MenuStoreSection() {
               alt="phone"
               className="franchise-icon"
             />
-          </a>
+          </Link>
 
-          <a href="#" className="franchise-item clickable">
+          <Link to="/franchise" className="franchise-item clickable">
             <div className="franchise-text">
               <strong>PROCESS</strong>
-              <span>창업절차 자세히보기</span>
+              <span className="more">창업절차 자세히보기</span>             
               <img
                 src={process.env.PUBLIC_URL + "/img/icon_arrow_right.png"}
                 alt="arrow"
@@ -243,7 +249,7 @@ function MenuStoreSection() {
               alt="search"
               className="franchise-icon"
             />
-          </a>
+          </Link>
 
           <div className="franchise-item call">
             <div className="franchise-text">

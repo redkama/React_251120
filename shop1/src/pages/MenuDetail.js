@@ -14,6 +14,7 @@ function MenuDetail() {
 
   const [tab, setTab] = useState(0);
   const [fade, setFade] = useState("");
+  const [showToast, setShowToast] = useState(false);
 
   // ✅ Hook은 조건 없이 항상 실행
   useEffect(() => {
@@ -58,7 +59,7 @@ function MenuDetail() {
           <div className="menu-detail-actions">
             <button
               className="btn-cart"
-              onClick={() =>
+              onClick={() => {
                 dispatch(
                   addItem({
                     id,
@@ -67,8 +68,10 @@ function MenuDetail() {
                     price,
                     count: 1,
                   })
-                )
-              }
+                );
+                setShowToast(true);
+                setTimeout(() => setShowToast(false), 2000);
+              }}
             >
               장바구니 담기
             </button>
@@ -104,6 +107,11 @@ function MenuDetail() {
           }
         </div>
       </div>
+      {showToast && (
+      <div className="cart-toast">
+        장바구니에 담겼습니다 🛒
+      </div>
+      )}
     </SubLayout>
   );
 }

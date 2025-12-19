@@ -204,20 +204,19 @@
   line-height: 0.5;
 }
 
-/* 메뉴 설명 */
-.menu-desc {
-  font-size: 14px;
-  opacity: 0.9;
-  line-height: 1.1;
-}
-
 /* 자세히 보기 */
 .more {
   margin-top: 8px;
   font-weight: 600;
   cursor: pointer;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s ease;
 }
 
+.more:hover {
+  color: #0053e4;
+}
 
 
 
@@ -257,6 +256,9 @@
 .franchise-item.clickable:hover {
   background: rgba(255,255,255,0.08);
 }
+.franchise-item.clickable:hover .more {
+  color: #0053e4;
+}
 
 /* 텍스트 묶음 */
 .franchise-text strong {
@@ -267,7 +269,7 @@
 
 .franchise-text span {
   font-size: 14px;
-  opacity: 0.9;
+  
 }
 
 /* 화살표 */
@@ -293,7 +295,7 @@
 .franchise-icon {
   width: 54px;
   height: auto;
-  opacity: 0.9;
+  
 }
 
 /* 화살표 이미지 */

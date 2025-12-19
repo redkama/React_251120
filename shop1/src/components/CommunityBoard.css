@@ -1,0 +1,209 @@
+/* ===============================
+   BOARD WRAP
+=============================== */
+.board-wrap {
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+/* ===============================
+   SEARCH
+=============================== */
+.board-search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+
+  padding: 6px 10px;              /* 🔥 높이 줄임 */
+  margin-bottom: 8px;
+
+  border: 1px solid #ddd;
+  background: #fcfcfc;
+}
+
+.board-search select,
+.board-search input {
+  height: 24px;
+  padding: 0 6px;
+  font-size: 13px;
+  border: 1px solid #ccc;
+}
+
+.board-search input {
+  width: 220px;
+}
+
+.board-search button {
+  height: 26px;
+  width: 60px;
+  background: #333;
+  color: #fff;
+  border: none;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.board-search button:hover {
+  background: #111;
+}
+
+/* ===============================
+   TOTAL COUNT
+=============================== */
+.board-count {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #e60012;
+}
+
+/* ===============================
+   BOARD SECTION TITLE
+=============================== */
+.board-section-title {
+  border-bottom: 2px solid #e60012; /* 🔥 기준선은 여기 */
+  padding-bottom: 1px;
+  margin-bottom: 3px;              /* 🔥 선 ↔ 내용 간격 */
+}
+
+.board-section-title span {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #e60012;
+  
+}
+
+/* ===============================
+   TABLE
+=============================== */
+.board-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.board-table th {
+  padding: 12px 0;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+
+  border-bottom: 1px solid #ccc;
+  background: #fafafa;
+}
+
+.board-table td {
+  padding: 10px 0;
+  font-size: 13px;
+  text-align: center;
+  color: #333;
+
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.board-table td.left {
+  text-align: left;
+  padding-left: 10px;
+}
+
+.board-table tr {
+  cursor: pointer;
+}
+
+.board-table tr:hover {
+  background: #fafafa;
+}
+
+/* 비밀글 자물쇠 */
+.lock {
+  margin-left: 6px;
+  font-size: 12px;
+  color: #e60012;
+}
+
+/* ===============================
+   ACTION BUTTONS
+=============================== */
+.board-actions {
+  margin-top: 16px;
+  text-align: right;
+}
+
+.board-actions button {
+  padding: 6px 16px;
+  margin-left: 6px;
+
+  background: #333;
+  color: #fff;
+  border: none;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.board-actions button:hover {
+  background: #111;
+}
+
+/* ===============================
+   READ VIEW
+=============================== */
+.board-read {
+  margin-top: 20px;
+}
+
+.board-read h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.board-read .meta {
+  font-size: 12px;
+  color: #777;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 8px;
+}
+
+.board-read .content {
+  font-size: 14px;
+  line-height: 1.6;
+  min-height: 120px;
+}
+
+/* ===============================
+   WRITE / EDIT FORM
+=============================== */
+.board-form {
+  padding-top: 0px;  
+}
+
+.board-form input,
+.board-form textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 8px;
+  font-size: 14px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.board-form textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+/* ===============================
+   EMPTY
+=============================== */
+.board-empty {
+  padding: 60px 0;
+  text-align: center;
+  font-size: 14px;
+  color: #777;
+}
+
+

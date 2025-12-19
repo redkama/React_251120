@@ -17,7 +17,7 @@ const menuData = [
     desc: "달콤한 갈릭소스와 현미 베이크의 고소함이 어우러진 메뉴",
     price: 11000,
     category: "Bake",
-    badge: "NEW"
+    badge: "HOT"
   },
   {
     id: 3,
@@ -97,67 +97,7 @@ const menuData = [
     desc: "파의 후레쉬한 풍미가 현미베이크의 맛을 한층 더 살려 주는 메뉴",
     price: 10000,
     category: "Bake",
-    badge: ""
-  },
-  {
-    id: 11,
-    img: process.env.PUBLIC_URL + "/img/img_menu_bake011.jpg",
-    en: "MARA BROWN RICE BAKE",
-    ko: "마라 현미베이크",
-    desc: "진한 마라의 풍미가 드디어 현미베이크를 만났다! 책임질 수 없는 치명적인 마성의 맛",
-    price: 10000,
-    category: "Bake",
-    badge: ""
-  },
-  {
-    id: 12,
-    img: process.env.PUBLIC_URL + "/img/img_menu_bake012.jpg",
-    en: "CHEESE PPURICCO BROWN RICE BAKE",
-    ko: "치즈 뿌리꼬 현미베이크",
-    desc: "바삭한 현미베이크에 치즈의 풍미가 사르르~ 세상에 이런맛이~",
-    price: 10000,
-    category: "Bake",
-    badge: ""
-  },
-  {
-    id: 13,
-    img: process.env.PUBLIC_URL + "/img/img_menu_bake013.jpg",
-    en: "CURRY PPURICCO BROWN RICE BAKE",
-    ko: "카레 뿌리꼬 현미베이크",
-    desc: "고소한 현미베이크에 카레의 풍미가 물씬~ 너무 매력있어!",
-    price: 10000,
-    category: "Bake",
-    badge: ""
-  },
-  {
-    id: 14,
-    img: process.env.PUBLIC_URL + "/img/img_menu_bake014.jpg",
-    en: "TUNA BROWN RICE BAKE",
-    ko: "참치 순살 현미베이크",
-    desc: "바삭한 현미베이크와 고단백질 참치의 고소함 양파의 아삭하고 상큼한 향이 살아있는 이색적인 메뉴 ",
-    price: 10000,
-    category: "Bake",
-    badge: ""
-  },
-  {
-    id: 15,
-    img: process.env.PUBLIC_URL + "/img/img_menu_bake015.jpg",
-    en: "YURINGI BROWN RICE BAKE",
-    ko: "유린기 순살 현미베이크",
-    desc: "상큼하고 깔끔한 유린기 소스와 치킨이 어우러져 느끼함이 전혀없는 현미베이크 순살 전용 메뉴",
-    price: 10000,
-    category: "Bake",
-    badge: ""
-  },
-  {
-    id: 16,
-    img: process.env.PUBLIC_URL + "/img/img_menu_bake016.jpg",
-    en: "WASABI BROWN RICE BAKE",
-    ko: "와닭 순살 현미베이크",
-    desc: "신선한 야채, 생와사비, 치킨의 삼박자가 어우러진 후레쉬한 환상의 하모니",
-    price: 10000,
-    category: "Bake",
-    badge: ""
+    badge: "HOT"
   },
   {
     id: 17,
@@ -167,7 +107,7 @@ const menuData = [
     desc: "은은한 훈제향과 단백한 육질이 촉촉하고 부드러운 메뉴",
     price: 10000,
     category: "Roast",
-    badge: ""
+    badge: "HOT"
   },
   {
     id: 18,
@@ -177,7 +117,7 @@ const menuData = [
     desc: "바비큐의 깊고 매운맛을 단계별로 느껴볼 수 있는 메뉴 ( 매운맛 1~4단계 중 택일)",
     price: 10000,
     category: "Roast",
-    badge: ""
+    badge: "NEW"
   },
   {
     id: 19,
@@ -237,7 +177,7 @@ const menuData = [
     desc: "숯불의 향과 땡초의 화끈한 매운맛이 입맛을 자극하는 중독성 있는 새로운 메뉴",
     price: 10000,
     category: "Roast",
-    badge: ""
+    badge: "HOT"
   },
   {
     id: 25,
@@ -260,35 +200,105 @@ const menuData = [
     badge: ""
   },
   {
-    id: 27,
-    img: process.env.PUBLIC_URL + "/img/img_menu_roast011.jpg",
-    en: "WASABI ROAST",
-    ko: "와닭 순살 로스트",
-    desc: "신선한 야채, 생와사비, 치킨의 삼박자가 어우러진 후레쉬한 환상의 하모니",
-    price: 10000,
-    category: "Roast",
+    id: 30,
+    img: process.env.PUBLIC_URL + "/img/img_menu_fried001.jpg",
+    en: "SOY FRIED CHICKEN",
+    ko: "간장맛닭 후라이드",
+    desc: "바삭, 단짠, 고소함의 3박자가 완벽한 맛닭꼬의 대표 후라이드 치킨",
+    price: 13000,
+    category: "Fried",
     badge: ""
   },
   {
-    id: 28,
-    img: process.env.PUBLIC_URL + "/img/img_menu_roast012.jpg",
-    en: "STEAK ROAST",
-    ko: "스테이크 순살 로스트",
-    desc: "아메리칸 스타일! 달짝하게 호불호 없는 중독적인 맛!",
-    price: 10000,
-    category: "Roast",
+    id: 31,
+    img: process.env.PUBLIC_URL + "/img/img_menu_fried002.jpg",
+    en: "GARLIC FRIED CHICKEN",
+    ko: "마늘맛닭 후라이드",
+    desc: "스위트한 마늘의 깊은 풍미를 느껴보세요",
+    price: 13000,
+    category: "Fried",
+    badge: "NEW"
+  },
+  {
+    id: 32,
+    img: process.env.PUBLIC_URL + "/img/img_menu_fried003.jpg",
+    en: "LEMON GREEN ONION FRIED CHICKEN",
+    ko: "레몬파닭 후라이드",
+    desc: "레몬의 상큼함과 후레쉬한 파의조화!",
+    price: 13000,
+    category: "Fried",
     badge: ""
   },
   {
-    id: 29,
-    img: process.env.PUBLIC_URL + "/img/img_menu_roast013.jpg",
-    en: "SRIRACHA ROAST",
-    ko: "스리라차 순살 로스트",
-    desc: "태국에서 느낄 수 있던 맛! 매콤하고 중독적인 감칠맛닭!",
-    price: 10000,
-    category: "Roast",
+    id: 33,
+    img: process.env.PUBLIC_URL + "/img/img_menu_fried004.jpg",
+    en: "PEPPER FRIED CHICKEN",
+    ko: "고추맛닭 후라이드",
+    desc: "고추의 매콤한 풍미가 물씬 누구나 좋아할 수 밖에 없는 매력직인 맛",
+    price: 13000,
+    category: "Fried",
+    badge: "HOT"
+  },
+  {
+    id: 34,
+    img: process.env.PUBLIC_URL + "/img/img_menu_fried005.jpg",
+    en: "ONION FRIED CHICKEN",
+    ko: "어니언맛닭 후라이드",
+    desc: "어니언과 요거트의 조화! 누구도 거부할 수 없는 향긋하고 후레쉬한 풍미가 매력적인 메뉴",
+    price: 13000,
+    category: "Fried",
     badge: ""
-  }
+  },
+  {
+    id: 35,
+    img: process.env.PUBLIC_URL + "/img/img_menu_side001.jpg",
+    en: "A SEASONED RICE CAKE",
+    ko: "국물떡볶이",
+    desc: "학교 앞에서 먹었던 추억의 맛~~ 아~ 그립다",
+    price: 7000,
+    category: "Side",
+    badge: ""
+  },
+  {
+    id: 36,
+    img: process.env.PUBLIC_URL + "/img/img_menu_side002.jpg",
+    en: "ROSE RICE CAKE",
+    ko: "로제떡볶이",
+    desc: "크리미한 소스와 고소한 치즈의 풍미가 솔솔~ 맛닭꼬가 만들면 다릅니다",
+    price: 7000,
+    category: "Side",
+    badge: "NEW"
+  },
+  {
+    id: 37,
+    img: process.env.PUBLIC_URL + "/img/img_menu_side003.jpg",
+    en: "OVEN CHICKEN FEET",
+    ko: "오븐닭발",
+    desc: "오븐 요리의 강자 !  맛닭꼬만의 야심작 !  탱글탱글하고 쫀득한 맛을 제대로 살린 국내최초 오븐닭발",
+    price: 7000,
+    category: "Side",
+    badge: ""
+  },
+  {
+    id: 38,
+    img: process.env.PUBLIC_URL + "/img/img_menu_side004.jpg",
+    en: "OVEN CHICKEN GIZZARD",
+    ko: "오븐똥집",
+    desc: "쫄깃쫄깃한 닭똥집을 오븐에 구워 풍성한 야채와 특제 소스로 볶아내 맛을 더한 메뉴",
+    price: 7000,
+    category: "Side",
+    badge: ""
+  },
+  {
+    id: 39,
+    img: process.env.PUBLIC_URL + "/img/img_menu_side005.jpg",
+    en: "OVEN CHICKEN CARTILAGE",
+    ko: "오븐닭오돌뼈",
+    desc: "닭오돌뼈의 식감이 오도독~~맛도 한가득 재미도 한가득",
+    price: 7000,
+    category: "Side",
+    badge: "HOT"
+  },
 ];
 
 export default menuData;
