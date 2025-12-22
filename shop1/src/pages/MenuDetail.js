@@ -16,6 +16,10 @@ function MenuDetail() {
   const [fade, setFade] = useState("");
   const [showToast, setShowToast] = useState(false);
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "instant" });
+  }, []);
+
   // ✅ Hook은 조건 없이 항상 실행
   useEffect(() => {
     setTimeout(() => setFade("end"), 100);
